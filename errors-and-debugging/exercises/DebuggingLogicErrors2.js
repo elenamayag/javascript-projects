@@ -2,7 +2,10 @@
 // Consider the first if/else block below. 
 // Add console.log(launchReady) after this block, then run the program.
 
+
+
 //Given the fuelLevel value, should launchReady be true or false after the check?  Is the program behaving as expected?
+// it should be false. Yes!
 
 let launchReady = false;
 let fuelLevel = 17000;
@@ -31,3 +34,5 @@ if (fuelLevel >= 20000) {
 // } else {
 //    console.log('Launch scrubbed.');
 // }
+
+console.log (launchReady) ; 
