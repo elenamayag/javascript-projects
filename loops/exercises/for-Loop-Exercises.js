@@ -57,7 +57,7 @@ console.log("--------")
   b. Print the arrays to confirm the results. */
   let exArray = [2, 3, 13, 18, -5, 38, -10, 11, 0, 104];
 exArray.sort();
-console.log(exArray)
+
 
   let evens = [ ];
   let odds = [ ];
