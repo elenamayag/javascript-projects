@@ -1,3 +1,8 @@
+let nums1 = [5, 10, 2, 42];
+let nums2 = [-2, 0, -10, -44, 5, 3, 0, 3];
+let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
+
+
 function findMinValue(arr){
   let min = arr[0];
   for (i = 0; i < arr.length; i++){
@@ -19,11 +24,43 @@ function findMinValue(arr){
 6) Be sure to print the results in order to verify your code.*/
 
 //Your function here...
+function sortNums(arr) {
+  let sortedArray = [];
+  while (arr.length > 0 ){
+      let min = findMinValue(arr);
+
+      sortedArray.push(min);
+
+      arr.splice(arr.indexOf(min), 1);
+  }
+  return sortedArray
+}
+
+console.log(sortNums(nums1));
+console.log(sortNums(nums2));
+console.log(sortNums(nums3));
+
+
 
 /* BONUS MISSION: Refactor your sorting function to use recursion below:
  */
+function sortNumsRecurvise(arr, sorted = []) {
+  if (arr.length === 0) {
+    return sorted;
+  } 
+  let min = findMinValue(arr);
+  sorted.push(min);
+  arr.splice(arr.indexOf(min), 1);
+  return sortNumsRecurvise(arr, sorted); 
+}
 
 //Sample arrays for testing:
-let nums1 = [5, 10, 2, 42];
-let nums2 = [-2, 0, -10, -44, 5, 3, 0, 3];
-let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
+
+let numsOneRec = [5, 10, 2, 42];
+let numsTwoRec = [-2, 0, -10, -44, 5, 3, 0, 3];
+let numsThreeRec = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
+
+
+console.log(sortNumsRecurvise(numsOneRec));
+console.log(sortNumsRecurvise(numsTwoRec));
+console.log(sortNumsRecurvise(numsThreeRec));
