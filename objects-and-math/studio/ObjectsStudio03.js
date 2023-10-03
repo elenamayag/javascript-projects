@@ -1,8 +1,22 @@
 // Code your crewMass function here:
+function crewMass(arr) {
+  let mass = 0;
+  for (let i = 0; i = arr.length; i++) {
+    mass += arr[i].mass;
+  }
+  return Math.round(mass * 10) / 10;
+}
+const rocketMass = 75000
 
+function getTotalMass(arr) {
+  return crewMass(arr) + rocketMass;
+}
 
 // Code your fuelRequired function here:
+function fuelRequired(arr) {
+  return getTotalMass(arr) * 9.5;
 
+}
 
 // The pre-selected crew is in the array at the end of this file.
 // Feel free to add, remove, or switch crew members as you see fit.
