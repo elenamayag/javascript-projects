@@ -1,6 +1,34 @@
 //We want to COMPLETELY reverse an array by flipping the order of the entries AND flipping the order of characters in each element.
+//let arr = ['hello', 'world', 123, 'orange'];
+let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
+let arrayTest2 = [123, 8897, 42, 1168, 8675309];
+let arrayTest3 = ['hello', 'world', 123, 'orange'];
 
-// Part One: Reverse Characters
+let str1 = 'apple';
+let str2 = 'LC101';
+let str3 = 'Capitalized Letters';
+let str4 = 'I love the smell of code in the morning. ';
+
+let number1 = 1234
+let number2 = 5678;
+
+function reverseCharacters(element) {
+    if (typeof element === 'number') {
+        return Number(String(element).split('').reverse().join('')); 
+    } else {
+        return element.split('').reverse().join('');
+    }
+}
+
+
+console.log(reverseCharacters(str1));
+console.log(reverseCharacters(str2));
+console.log(reverseCharacters(str3));
+console.log(reverseCharacters(str4));
+
+console.log(reverseCharacters(number1));
+console.log(reverseCharacters(number2));
+// Part One: Reverse Characters^^
 
 // 1. Define the function as reverseCharacters. Give it one parameter, which will be the string to reverse.
 // 2. Within the function, split the string into an array, then reverse the array.
@@ -9,7 +37,19 @@
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
-// Part Two: Reverse Digits
+
+function reverseArray(arrayTest) {
+    let newArray = [];
+    for (let i = 0; i <arrayTest.length; i++) {
+        newArray.push(reverseCharacters(arrayTest[i]));
+    }
+    return newArray.reverse();
+}
+
+console.log(reverseArray(arrayTest1));
+console.log(reverseArray(arrayTest2));
+console.log(reverseArray(arrayTest3));
+// Part Two: Reverse Digits^^
 
 // 1. Add an if statement to reverseCharacters to check the typeof the parameter.
 // 2. If typeof is ‘string’, return the reversed string as before.
@@ -17,7 +57,19 @@
 // 4. Return the reversed number.
 // 5. Be sure to print the result returned by the function to verify that your code works for both strings and numbers. Do this before moving on to the next exercise.
 
-// Part Three: Complete Reversal
+
+function reverseArray(arrayTest) {
+    let reversedArray = [];
+    for (let i = arrayTest.length - 1; i >= 0; i--) {
+        reversedArray.push(reverseCharacters(arrayTest[i]));
+    }
+    return reversedArray;
+}
+
+console.log(reverseArray(arrayTest1));
+console.log(reverseArray(arrayTest2));
+console.log(reverseArray(arrayTest3));
+// Part Three: Complete Reversal^^
 
 // 1. Define and initialize an empty array.
 // 2. Loop through the old array.
@@ -26,9 +78,6 @@
 // 5. Return the final, reversed array.
 // 6. Be sure to print the results from each test case in order to verify your code.
 
-let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
-let arrayTest2 = [123, 8897, 42, 1168, 8675309];
-let arrayTest3 = ['hello', 'world', 123, 'orange'];
 
 // Bonus Missions
 
@@ -43,9 +92,9 @@ let arrayTest3 = ['hello', 'world', 123, 'orange'];
 // 2. Call your function and print the returned phrase.
 
 // Area of rectangle equal to length x width
-
+/*
 // 1. Define a function with the required parameters to calculate the area of a rectangle.
 // 2. The function should return the area, NOT print it.
 // 3. Call your area function by passing in two arguments - the length and width.
 // 4. If only one argument is passed to the function, then the shape is a square. Modify your code to deal with this case.
-// 5. Use a template literal to print, “The area is ____ cm^2.”
+// 5. Use a template literal to print, “The area is ____ cm ^ 2.”*/
