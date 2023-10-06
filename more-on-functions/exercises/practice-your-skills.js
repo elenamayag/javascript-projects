@@ -11,5 +11,20 @@ a) Triple any the numbers.
 b) Replace any strings with “ARRR!”
 c) Print the new array to confirm your work.
 */
-
 let arr = ['Elocution', 21, 'Clean teeth', 100];
+
+let practice = function(arr) {
+    if (typeof arr === "number") {
+       return arr * 3;
+    } else if (typeof arr === "string") {
+       return "ARRR!";
+    } else {
+       return arr;
+    }
+ 
+ }
+let tripleNumbersAndReplacedArr = arr.map(practice); 
+
+
+console.log(tripleNumbersAndReplacedArr);
+
