@@ -25,7 +25,7 @@ function printStudentScores(index,students,tests,scores){
     console.log(`${tests[i]} = ${scores[index][i]}%.`);
   }
   return;
-}
+} 
 
 function printTestScores(index,test,students,scores){
   console.log(`Class results for ${test} test:`);
@@ -34,3 +34,6 @@ function printTestScores(index,test,students,scores){
   }
   return;
 }
+
+
+module.exports = printAll;
