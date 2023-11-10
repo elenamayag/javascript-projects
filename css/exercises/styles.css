@@ -1,9 +1,10 @@
 /* Start adding your styling below! */ 
 body {
     background-color: yellow;
+    text-align: center;
 }
 
-script {
+p {
     color: green;
 }
 
@@ -15,10 +16,10 @@ h1 {
     text-align: center;
 }
 
-cool-text {
+#cool-text {
     color: blue;
 }
 
-#list-color {
+#ordered-list {
     color: mediumslateblue;
 }
